@@ -8,10 +8,12 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 // import Avatar from "@mui/material/Avatar";
-import {Button, ButtonGroup } from "@mui/material";
+import {Button, ButtonGroup, Link } from "@mui/material";
 // import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import LogoDevIcon from "@mui/icons-material/LogoDev";
+import './Components.css';
+
 
 const pages = [ {"nombre":"What We Work", "to":"WhatWeWork"}, {"nombre":"Contact", "to":"Contact"}, {"nombre":"Blog", "to":"Blog"}];
 // const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -36,7 +38,7 @@ function ResponsiveAppBar() {
 //   };
 
   return (
-    <AppBar position="static" color="transparent">
+    <AppBar position="static" color="transparent" className="gris">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <LogoDevIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
@@ -88,8 +90,13 @@ function ResponsiveAppBar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem  onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page.nombre}</Typography>
+                 
+                 <MenuItem  
+                    onClick={handleCloseNavMenu}
+                    component={Link}
+                    href={page.to}
+                     >
+                  <Typography textAlign="center" >{page.nombre}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -113,13 +120,22 @@ function ResponsiveAppBar() {
           >
           OSCAR DANIEL DEV
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-          <ButtonGroup variant="text" aria-label="text button group">
+          <Box      
+            display="flex"
+            justifyContent="flex-end"
+            alignItems="flex-end"
+            sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
+            >
+            <ButtonGroup 
+                variant="text"
+                aria-label="text button group"
+                >
 
             {pages.map((page) => (
                 <Button
                  onClick={handleCloseNavMenu}
                  href={page.to}
+                 className="borde-blanco"
 
                 sx={{ my: 2, color: "white", display: "block" }}
             >
