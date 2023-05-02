@@ -1,0 +1,43 @@
+{
+        "navBar":{
+            "Contact":"Contact",
+            "WhatWeWork": "What We Work",
+            "AboutMe":  "About Me"
+        },
+        "home":{
+            "slogan": "Power your digital presence",
+            "title": "Software design and development",
+            "sub-title": "Web sites, e-commerce, mobile apps & data bases",
+            "why-dig": "Why is it so important to increase your digital presence?",
+            "digital-statistics": "Digital statistics",
+            "click-here": "Click here",
+            "want-know-stadistics": "Do you want to know the stadistics?",
+            "stadistics":"Stadistics",
+            "developmen-tec":"Development tecnologies",
+
+            "Greater-brand-recognition": {
+                "info-p1":"The brand of a business is something intangible and tangible at the same time. It is an element that goes far beyond its name, slogan and visual identity.",
+                "info-p2":"In general terms, we can say that the brand is everything with which a company is related and identified, which entails virtues, values, tone of voice, colors, products or services, price-quality ratio and much more.",
+                "title":"Greater brand recognition"
+            },
+
+            "Access-to-the-new-generations": {
+                "info-p1":"The companies that stand the test of time and consolidate in certain market segments are those that constantly attract and captivate new generations of consumers.",
+                "info-p2":"Logically, to achieve this it is necessary to know the consumption patterns of the youngest users and their concerns, needs, problems and objectives.",
+                "title":"Access to the new generations"
+            },
+            
+            "Obtaining-relevant-data-and-information": {
+                "info-p1":"Once you consolidate the digital presence of your business, relevant information of interest will begin to reach you in a systematic and constant way.",
+                "info-p2":"Elements as basic as user comments on social networks and the evaluation of a product in an online store make it possible to understand the public's perception and, thus, find or detect areas for improvement.",
+                "title":"Obtaining relevant data and information"
+            }
+
+           
+
+
+
+
+        }
+    
+}

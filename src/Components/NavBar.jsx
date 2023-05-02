@@ -13,12 +13,22 @@ import {Button, ButtonGroup, Link } from "@mui/material";
 import MenuItem from "@mui/material/MenuItem";
 import LogoDevIcon from "@mui/icons-material/LogoDev";
 import './Components.css';
+import { changeLanguage } from "i18next";
+import { US, MX } from 'country-flag-icons/react/3x2'
+import {useTranslation} from "react-i18next"
 
 
-const pages = [ {"nombre":"What We Work", "to":"WhatWeWork"}, {"nombre":"Contact", "to":"Contact"}, {"nombre":"Blog", "to":"Blog"}];
 // const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function ResponsiveAppBar() {
+
+  const saveLanguage = (language) => {
+    sessionStorage.setItem("sessionLanguage", language);
+    changeLanguage(language)
+  }
+  const [t, i18n] = useTranslation("global");
+
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 //   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -89,16 +99,36 @@ function ResponsiveAppBar() {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
                  
                  <MenuItem  
                     onClick={handleCloseNavMenu}
                     component={Link}
-                    href={page.to}
+                    href="/WhatWeWork"
                      >
-                  <Typography textAlign="center" >{page.nombre}</Typography>
+                  <Typography textAlign="center" >{t('navBar.WhatWeWork')}</Typography>
                 </MenuItem>
-              ))}
+
+                  <MenuItem  
+                    onClick={handleCloseNavMenu}
+                    component={Link}
+                    href="/Contact"
+                     >
+                  <Typography textAlign="center" >{t('navBar.Contact')}</Typography>
+                </MenuItem>
+
+                  <MenuItem  
+                    onClick={handleCloseNavMenu}
+                    component={Link}
+                    href="AboutMe"
+                     >
+                  <Typography textAlign="center" >{t('navBar.AboutMe')}</Typography>
+                </MenuItem>
+                <MenuItem sx={{ flexGrow: 1, borderTop: 1  }} >
+                  <Typography    onClick={() => saveLanguage("en")}  textAlign="center" >ENG</Typography> 
+                </MenuItem>
+                <MenuItem>
+                  <Typography    onClick={() => saveLanguage("es")} textAlign="center" >ESP</Typography>
+                </MenuItem>
             </Menu>
           </Box>
           <LogoDevIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
@@ -131,19 +161,48 @@ function ResponsiveAppBar() {
                 aria-label="text button group"
                 >
 
-            {pages.map((page) => (
+            {/* {pages.map((page) => ( */}
                 <Button
                  onClick={handleCloseNavMenu}
-                 href={page.to}
+                 href="/WhatWeWork"
                  className="borde-blanco"
 
                 sx={{ my: 2, color: "white", display: "block" }}
-            >
-                    {page.nombre}
+                >
+                    {t('navBar.WhatWeWork')}
 
-            </Button>
+                </Button>
 
-            ))}
+                <Button
+                 onClick={handleCloseNavMenu}
+                 href="/Contact"
+                 className="borde-blanco"
+
+                sx={{ my: 2, color: "white", display: "block" }}
+                >
+                    {t('navBar.Contact')}
+
+                </Button>
+
+                <Button
+                 onClick={handleCloseNavMenu}
+                 href="/AboutMe"
+                 className="borde-blanco"
+
+                sx={{ my: 2, color: "white", display: "block" }}
+                >
+                    {t('navBar.AboutMe')}
+
+                </Button>
+
+            {/* ))} */}
+
+              <Button onClick={() => saveLanguage("en")} className="borde-transparente">
+                <US title="United States"/>
+              </Button>
+              <Button onClick={() => saveLanguage("es")}className="borde-transparente">
+                <MX title="Mexico"/>
+              </Button>
             </ButtonGroup>
 
             {/* <ButtonGroup variant="text" aria-label="text button group">
@@ -163,7 +222,7 @@ function ResponsiveAppBar() {
                     sx={{ my: 2, color: "white", display: "block" }}
                     href="/Contact"
                 >
-                    Blog
+                    AboutMe
                 </Button>
             </ButtonGroup> */}
 

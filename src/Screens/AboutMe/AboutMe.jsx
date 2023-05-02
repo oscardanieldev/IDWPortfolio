@@ -1,7 +1,12 @@
-import './Blog.css';
+import './AboutMe.css';
 import {Grid} from '@mui/material';
-
+import {useTranslation} from "react-i18next"
+import Rotate from 'react-reveal/Rotate';
 function Blog() {
+
+
+  const [t, i18n] = useTranslation("global");
+
   return (
     
     <div className="App">
@@ -9,7 +14,9 @@ function Blog() {
       <header className="r">
         <Grid container >
             <Grid item xs={12}>
-                <h1>Blog</h1>         
+              <Rotate>
+            <h1>{t('home.title')}</h1>       
+            </Rotate>  
             </Grid>
         </Grid>
       </header>

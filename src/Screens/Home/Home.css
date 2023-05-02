@@ -1,6 +1,11 @@
+
+
+
 .App {
     text-align: center;
   }
+
+
   
   .App-logo {
     height: 40vmin;
@@ -36,3 +41,159 @@
     }
   }
   
+
+  /* .bg-img-Oscar{
+    background-image: url(./img/oscarDev_logos.png);
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    border-radius: 5%;
+  }
+  .bg-codigo{
+    background-image: url(./img/bg-circulos.png); 
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+  } */
+  .titulo{
+    font-size: 3rem;
+    font-family: 'Castoro Titling';
+    /* background-color: #5e5e5e79; */
+    border-radius: 5%;
+
+  }
+  .sub-titulo{
+    border-radius: 5%;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    font-family: 'Castoro Titling';
+    /* background-color: #5e5e5e79; */
+
+  }
+  .imagen-logo{
+    width: 100px;
+    padding: 1rem 0;
+
+  }
+
+  .color-secundario{
+    color: aqua;
+  }
+
+  .arrowStyles{
+    transform: scale(5);
+  }
+  .clickHere{
+    font-size: 10rem;
+    color: red;
+  }
+
+  .reboteOut {
+  
+    font-family: Arial;
+    text-align: center;
+    font-size: 50px;
+    margin: 100px 50px;
+    
+  }
+
+  .acordion{
+    background-color: rgb(58, 58, 58) !important;
+    color: white !important;
+  }
+
+  
+  
+  .reboteOut {
+   
+    animation: reboteOut 1s infinite;
+   
+  }
+  
+  /* Creamos la animación (con keyframes) */
+  
+  @keyframes reboteOut {
+   
+    25% {
+      
+      transform: scale(0.9);
+    }
+    
+    50% {
+       opacity: 1;
+       transform: scale(1.1);
+    }
+  
+    100% {
+      
+       transform: scale(0.0);
+       opacity: 0;
+      
+    }
+  
+  }
+  
+  button {
+    margin: 20px;
+  }
+  .custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+  
+/* 9 */
+.btn-9 {
+  border: none;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.btn-9:after {
+  position: absolute;
+  content: " ";
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+   background-color: #1fd1f9;
+background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+  transition: all 0.3s ease;
+}
+.btn-9:hover {
+  background: transparent;
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+  color: #fff;
+}
+.btn-9:hover:after {
+  -webkit-transform: scale(2) rotate(180deg);
+  transform: scale(2) rotate(180deg);
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+}
+
+.css-yw020d-MuiAccordionSummary-expandIconWrapper {
+  color: aqua !important;
+}

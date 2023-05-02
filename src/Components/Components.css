@@ -2,3 +2,6 @@
     border-color: white !important;
   }
   
+  .borde-transparente {
+    border-color: transparent !important;
+  }

@@ -1,0 +1,45 @@
+{
+    "navBar":{
+        "Contact":"Contacto",
+        "WhatWeWork": "Portafolio",
+        "AboutMe":  "Sobre mí"
+    },
+    "home":{
+        "slogan": "Potencia tu presencia digital",
+        "title": "Diseño y desarrollo de software",
+        "sub-title": "Sitios web, ventas por internet, aplicaciones móviles & bases de datos",
+        "why-dig": "¿Por qué es tan importante incrementar tu presencia digital?",
+        "digital-statistics": "Estadísticas digitales",
+        "click-here": "Haga clic aquí",
+        "want-know-stadistics": "¿Quieres conocer las estadísticas?",
+        "stadistics":"Estadísticas",
+        "developmen-tec":"Tecnologías de desarrollo",
+
+
+
+        "Greater-brand-recognition": {
+            "info-p1":"La marca de un negocio es algo intangible y tangible a la vez. Se trata de un elemento que va mucho más allá de su nombre, eslogan e identidad visual.",
+            "info-p2":"En líneas generales, podemos decir que la marca es todo aquello con lo que se relaciona e identifica a una empresa, lo que conlleva virtudes, valores, tono de voz, colores, productos o servicios, relación precio-calidad y muchas cosas más.",
+            "title":"Mayor reconocimiento de marca"
+        },
+
+        "Access-to-the-new-generations": {
+            "info-p1":"Las empresas que resisten el paso del tiempo y se consolidan en determinados segmentos de mercado son aquellas que constantemente captan y cautivan a las nuevas generaciones de consumidores.",
+            "info-p2":"Lógicamente, para lograr esto es necesario conocer los patrones de consumo de los usuarios más jóvenes y sus inquietudes, necesidades, problemas y objetivos.",
+            "title":"Acceso a las nuevas generaciones"
+
+        },
+
+                    
+        "Obtaining-relevant-data-and-information": {
+            "info-p1":"Una vez que consolides la presencia digital de tu negocio, información de interés relevante comenzará a llegar a tu poder de manera sistemática y constante.",
+            "info-p2":"Elementos tan básicos como los comentarios de los usuarios en las redes sociales y la valoración de un producto en una tienda en línea permiten comprender la percepción del público y, de este modo, hallar o detectar áreas de mejora.",
+            "title":"Obtención de datos e información relevante"
+        }
+        
+
+
+
+    }
+
+}
