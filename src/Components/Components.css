@@ -5,3 +5,9 @@
   .borde-transparente {
     border-color: transparent !important;
   }
+  .bgColor{
+    background-color: red;
+  }
+  .iconColor{
+    background-color: rgb(41, 126, 114);
+  }

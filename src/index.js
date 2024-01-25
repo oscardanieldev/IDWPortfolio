@@ -8,6 +8,8 @@ import global_en from "./translations/en/global.json";
 import Home from "./Screens/Home/Home.jsx";
 import Contact from "./Screens/Contact/Contact.jsx";
 import NavBar from "./Components/NavBar.jsx";
+import Footer from "./Components/Footer.jsx";
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -67,7 +69,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <NavBar />
       <RouterProvider router={router} />
     </I18nextProvider>
+      <Footer />
   </React.StrictMode>
+  
 );
 
 // If you want to start measuring performance in your app, pass a function
