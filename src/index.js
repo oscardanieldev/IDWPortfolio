@@ -60,7 +60,7 @@ const router = createBrowserRouter([
   {
     path: "/Statistics",
     element: <Statistics />,
-  },
+  }, 
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -68,8 +68,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <I18nextProvider i18n={i18next}>
       <NavBar />
       <RouterProvider router={router} />
-    </I18nextProvider>
       <Footer />
+
+    </I18nextProvider>
   </React.StrictMode>
   
 );
