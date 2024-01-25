@@ -1,0 +1,17 @@
+.sub-titulo{
+    border-radius: 5%;
+    color: aqua;
+    font-size: 2rem;
+    font-family: 'Castoro Titling';
+    /* background-color: #5e5e5e79; */
+
+  }
+
+  .elementos{
+    border-radius: 5%;
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    font-family: 'Castoro Titling';
+    /* background-color: #5e5e5e79; */
+
+  }

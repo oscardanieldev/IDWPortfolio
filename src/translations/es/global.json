@@ -39,7 +39,31 @@
         
 
 
+    },
+    "Statistics":{
+        "title": "Estadísticas",
+        "info-title": "En datos, ¿Por qué es tan importante tener Presencia Digital?",
+        "info-subtitle": "¿Sabes lo que ocurre mundialmente solo en 1 minuto en Internet?",
+        "info-pr1-1": "Hay 4.497.420 de búsquedas solo en Google.",
+        "info-pr1-2": "Se descargan 390.030 aplicaciones.",
+        "info-pr1-3": "Los usuarios de Netflix ven en total 694.444 horas de video.",
+        "info-pr1-4": "Hay 277.777 publicaciones de historias en Instagram y 55.140 posts en el feed.",
+        "info-pr1-5": "Los usuarios de Youtube ven en total 4.500.000 videos.",
+        "info-pr1-6": "En Twitter se publican 511.200 tweets.",
+        "info-pr1-7": "Se envían 188.000.000 correos electrónicos. ",
+        "info-pr2-1": "Una cifra en la que vale la pena profundizar es la cantidad de búsquedas que se hacen por minuto en Google. Al día son aproximadamente 6 mil millones de búsquedas en todo el mundo, y al año son 2.190 billones. Por lo que, si no tenemos presencia en Google realmente estamos desaprovechando una tremenda oportunidad. "
+   
+    },
 
+    "Aboutme":{
+        "title": "Sobre mí",
+        "presentation": "Hola, soy Oscar, trabajo como desarrollador web desde el 2019. Quiero compartirte un poco de mi experiencia y qué es lo que me impulsó a ser un apasionado de esta bonita profesión.",
+        "exp-1-1": "Inicié en el desarrollo de software trabajando de manera independiente, programé algunas landing pages y bases de datos para clientes del área de ventas y entretenimiento. En 2020 comencé a trabajar en ",
+        "exp-1-2": " como analista de programación Sr. desarrollando con React js, React Native, Wordpress, Laravel entre otras, pero principalmente con CRM Salesforce, tecnología que me parece muy util y escalable.",
+        "exp-2-1": "En 2023 comencé un nuevo reto trabajando en ",
+        "exp-2-2": " en donde se me asignó como cliente a ",
+        "exp-2-3": " trabajando como desarrollador Salesforce Sr. Sin lugar a dudas puedo decir que fue una etapa muy enriquesedora en la que adquirí muchos conocimientos como desarrollador y consultor Salesforce.",
+        "exp-3": "Actualmente trabajo de manera independiente desarrollado aplicacones web y móbiles, impulsando la presencia digital. Así mismo como consultor y desarrollador Salesforce, ofreciendo mis conocimientos para darle a mis clientes la mejor experiencia en esta gran herramienta digital."
     }
 
 }

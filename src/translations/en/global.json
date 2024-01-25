@@ -34,10 +34,33 @@
             }
 
            
+        },
+        "Statistics":{
+            "title": "Statistics",
+            "info-title": "In data, why is it so important to have a Digital Presence?",
+            "info-subtitle": "Do you know what happens worldwide in just 1 minute on the Internet?",
+            "info-pr1-1": "There are 4,497,420 searches on Google alone.",
+            "info-pr1-2": "390,030 applications are downloaded.",
+            "info-pr1-3": "LNetflix users watch a total of 694,444 hours of video.",
+            "info-pr1-4": "There are 277,777 story posts on Instagram and 55,140 posts in the feed.",
+            "info-pr1-5": "YouTube users watch a total of 4,500,000 videos.",
+            "info-pr1-6": "511,200 tweets are published on Twitter.",
+            "info-pr1-7": "188,000,000 emails are sent. ",
+            "info-pr2-1": "A figure worth delving into is the number of searches performed per minute on Google. There are approximately 6 billion searches per day around the world, and per year there are 2,190 billion. Therefore, if we do not have a presence on Google we are really wasting a tremendous opportunity."
+       
+        },
 
-
-
-
+        "Aboutme":{
+            "title": "About me",
+            "presentation": "Hello, I'm Oscar, I've been working as a web developer since 2019. I want to share a little about my experience and what drove me to be passionate about this beautiful profession.",
+            "exp-1-1": "I started in software development working independently, I programmed some landing pages and databases for clients in the sales and entertainment area. In 2020 I started working ",
+            "exp-1-2": " with the position of Sr. programming analyst developing with React js, React Native, Wordpress, Laravel among others, but mainly with CRM Salesforce, a technology that seems very useful and scalable to me. ",
+            "exp-2-1": "In 2023 I started a new challenge working at ",
+            "exp-2-2": " where I was assigned as a customer to  ",
+            "exp-2-3": " working as a Salesforce Sr. developer. Without a doubt I can say that it was a very enriching stage in which I acquired a lot of knowledge as a Salesforce developer and consultant.",
+            "exp-3": " I currently work independently developing web and mobile applications, promoting digital presence. Also as a Salesforce consultant and developer, offering my knowledge to give my clients the best experience in this great digital tool."
+    
+       
         }
     
 }

@@ -16,6 +16,9 @@ import "./index.css";
 import WhatWeWork from "./Screens/WhatWeWork/WhatWeWork.jsx";
 import AboutMe from "./Screens/AboutMe/AboutMe.jsx";
 
+import Statistics from "./Screens/Home/Statistics/Statistics.jsx";
+
+
 let sessionLanguage = sessionStorage.getItem("sessionLanguage");
 
 let idioma = (sessionLanguage == null? 'es':sessionLanguage)
@@ -51,6 +54,10 @@ const router = createBrowserRouter([
   {
     path: "/AboutMe",
     element: <AboutMe />,
+  },
+  {
+    path: "/Statistics",
+    element: <Statistics />,
   },
 ]);
 

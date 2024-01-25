@@ -16,8 +16,9 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Grow from '@mui/material/Grow';
 import Rotate from 'react-reveal/Rotate';
 import LightSpeed from 'react-reveal/LightSpeed';
-
-
+import oscarDanielDevHome from "./img/OscarDanielDevHome.png";
+import { Fab, Action } from 'react-tiny-fab';
+import 'react-tiny-fab/dist/styles.css';
 
 
 
@@ -25,7 +26,7 @@ import LightSpeed from 'react-reveal/LightSpeed';
 function Home() {
   //Js code
 
-  const [t, i18n] = useTranslation("global");
+  const [t] = useTranslation("global");
 
   //Render
   return (
@@ -55,7 +56,13 @@ function Home() {
                 </Box> 
               </Grow>
             </Grid>
-            <Grid item md={6} xs={12} className='bg-img-Oscar'>
+
+            <Grid item md={6} xs={12} className="bg-img-OscarDevHome">
+            {/* <img src={oscarDanielDevHome} alt="oscarDanielDevHome" /> */}
+
+            </Grid>
+
+            <Grid item md={12} xs={12} className='bg-img-Oscar'>
             <Grow
                 in={true}
                 style={{ transformOrigin: '0 0 0' }}
@@ -135,7 +142,7 @@ function Home() {
                 {...(true ? { timeout: 3500 } : {})}
               >  
                 <Box>
-                  <button class="custom-btn btn-9"><span>{t("home.stadistics")}</span></button> 
+                <a class="unstyle" href="/Statistics"><button class="custom-btn btn-9"><span>{t("home.stadistics")}</span></button> </a>
                 </Box> 
               </Grow> 
 
