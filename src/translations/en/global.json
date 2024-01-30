@@ -63,7 +63,11 @@
        
         },
         "Services":{
-            "title": "Services"
+            "title": "Services",
+            "salesforce-title": "Salesforce consulting and development",
+            "eCommerce-title": "E-Commerce",
+            "mobileDeveloper-title": "Mobile development",
+            "webDeveloper-title": "Web development"
         },
         "footer":{
             "copyRight":"All rights reserved."

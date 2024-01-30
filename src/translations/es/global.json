@@ -66,7 +66,12 @@
         "exp-3": "Actualmente trabajo de manera independiente desarrollado aplicacones web y móbiles, impulsando la presencia digital. Así mismo como consultor y desarrollador Salesforce, ofreciendo mis conocimientos para darle a mis clientes la mejor experiencia en esta gran herramienta digital"
     },
     "Services":{
-        "title": "Servicios"
+        "title": "Servicios",
+        "salesforce-title": "Consultoría y desarrollo Salesforce",
+        "eCommerce-title": "Ventas por internet",
+        "mobileDeveloper-title": "Desarrollo de aplicaciones móviles",
+        "webDeveloper-title": "Desarrollo de aplicaciones Web"
+
     },
     "footer":{
         "copyRight":"Todos los derechos reservados"
