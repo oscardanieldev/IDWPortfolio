@@ -14,6 +14,7 @@ import { TfiEmail } from "react-icons/tfi";
 function Footer() {
   //Js code
   const styleFab = { bottom: 14, right: 14 };
+  const iconFotter = { padding: '0 1rem' };
   const styleMainButtom = { backgroundColor: 'aqua' };
   const styleChildrenAction = { backgroundColor: 'aqua' };
   const urlsDireccion = {
@@ -93,8 +94,32 @@ function Footer() {
               
             >
                 <Grid item xs={12}>
-                      <Box sx={{ flexGrow: 1, p: { xs: 2, md: 8 }, m: {xs: 2, md: 4} }} className="colorTextPrimary">
-                        {t('footer.title')} 
+                      <Box sx={{ flexGrow: 1, p: { xs: 2, md: '4rem 4rem' }, m: {xs: 2, md: 2},  borderTop: 1  }} className="stylesFooter">
+                        <Box sx={{ flexGrow: 1, p: { xs: 2, md: '1rem  0' }}}>
+                        {t('footer.copyRight')} &#169; 2024
+                        </Box>
+                        <Button>
+                          <FaLinkedin  
+                              size={25}
+                              color='aqua'
+                              style={iconFotter}
+                              onClick={goToLinkedin} />
+                        </Button>
+                        <Button>
+                          <FaWhatsapp  
+                              size={25}
+                              color='aqua'
+                              style={iconFotter}
+                              onClick={sendWhatsapp} />
+                        </Button>
+                        <Button>
+                          <TfiEmail  
+                              size={25}
+                              color='aqua'
+                              style={iconFotter} 
+                              onClick={sendEmail}/>
+                        </Button>
+
                       </Box>  
                 </Grid>
 

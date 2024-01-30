@@ -9,6 +9,8 @@ import Home from "./Screens/Home/Home.jsx";
 import Contact from "./Screens/Contact/Contact.jsx";
 import NavBar from "./Components/NavBar.jsx";
 import Footer from "./Components/Footer.jsx";
+import Services from "./Screens/Services/Services.jsx";
+
 
 import {
   createBrowserRouter,
@@ -54,12 +56,16 @@ const router = createBrowserRouter([
     element: <WhatWeWork />,
   },
   {
+    path: "/Statistics",
+    element: <Statistics />,
+  }, 
+  {
     path: "/AboutMe",
     element: <AboutMe />,
   },
   {
-    path: "/Statistics",
-    element: <Statistics />,
+    path: "/Services",
+    element: <Services />,
   }, 
 ]);
 

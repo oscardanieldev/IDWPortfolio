@@ -12,6 +12,8 @@
     background-color: rgb(41, 126, 114);
   }
 
-  .colorTextPrimary{
+  .stylesFooter{
     color: aqua;
+    border-radius: 25%;
+
   }

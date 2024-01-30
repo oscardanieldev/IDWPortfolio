@@ -12,10 +12,12 @@ import {Button, ButtonGroup, Link } from "@mui/material";
 // import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem"; 
 import LogoDevIcon from "@mui/icons-material/LogoDev";
+import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 import './Components.css';
 import { changeLanguage } from "i18next";
 import { US, MX } from 'country-flag-icons/react/3x2'
 import {useTranslation} from "react-i18next"
+import { FaCodepen } from "react-icons/fa6";
 
 
 // const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -51,7 +53,7 @@ function ResponsiveAppBar() {
     <AppBar position="static" color="transparent" className="gris">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <LogoDevIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          <RocketLaunchIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1, color: "aqua" }} />
           <Typography
             variant="h6"
             noWrap
@@ -99,13 +101,20 @@ function ResponsiveAppBar() {
                 display: { xs: "block", md: "none" },
               }}
             >
-                 
+{/*                  
                  <MenuItem  
                     onClick={handleCloseNavMenu}
                     component={Link}
                     href="/WhatWeWork"
                      >
                   <Typography textAlign="center" >{t('navBar.WhatWeWork')}</Typography>
+                </MenuItem> */}
+                  <MenuItem  
+                    onClick={handleCloseNavMenu}
+                    component={Link}
+                    href="/Services"
+                     >
+                  <Typography textAlign="center" >{t('Services.title')}</Typography>
                 </MenuItem>
 
                   <MenuItem  
@@ -131,7 +140,7 @@ function ResponsiveAppBar() {
                 </MenuItem>
             </Menu>
           </Box>
-          <LogoDevIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+          <RocketLaunchIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1, color: "aqua" }} />
           <Typography
             variant="h5"
             noWrap
@@ -162,7 +171,7 @@ function ResponsiveAppBar() {
                 >
 
             {/* {pages.map((page) => ( */}
-                <Button
+                {/* <Button
                  onClick={handleCloseNavMenu}
                  href="/WhatWeWork"
                  className="borde-blanco"
@@ -170,6 +179,17 @@ function ResponsiveAppBar() {
                 sx={{ my: 2, color: "white", display: "block" }}
                 >
                     {t('navBar.WhatWeWork')}
+
+                </Button> */}
+
+                <Button
+                 onClick={handleCloseNavMenu}
+                 href="/Services"
+                 className="borde-blanco"
+
+                sx={{ my: 2, color: "white", display: "block" }}
+                >
+                    {t('Services.title')}
 
                 </Button>
 

@@ -62,8 +62,11 @@
     
        
         },
+        "Services":{
+            "title": "Services"
+        },
         "footer":{
-            "title":"Footer"
+            "copyRight":"All rights reserved."
         }
     
 }
