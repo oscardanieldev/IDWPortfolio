@@ -1,6 +1,12 @@
 .sobreMiInfo{
   text-align: justify;
   text-justify: inter-word;
+  border-radius: 1%;
+  color: aqua;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-top: 1px solid aqua;
+
 }
 .unstyle {
   all: unset;

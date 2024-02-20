@@ -11,6 +11,14 @@ import Card from 'react-bootstrap/Card';
 // import Rotate from 'react-reveal/Rotate';
 function ServiceComp(element) {
     console.log('serv',element);
+    console.log('nombre serv',element.element.servicio);
+    const styleCard = {
+      width: '100%', 
+      // backgroundColor: 'rgb(231, 231, 231)' ,
+      color: 'white',
+      padding: '2rem',
+      
+    }
 
   const [t, i18n] = useTranslation("global");
 
@@ -19,16 +27,13 @@ function ServiceComp(element) {
 
             <Grid item md={6} xs={12} className="">
                   <Box sx={{ flexGrow: 1, p: { xs: 2, md: 8 }, mb: {xs: 2, md: 4} }} className="sobreMiInfo">
-                    <Card style={{ width: '100%', backgroundColor: 'red'  }}>
+                    <Card style={styleCard}>
                         <Card.Body>
-                          <Card.Title>{t('Services.webDeveloper-title')}</Card.Title>
-                          <Card.Subtitle className="mb-2 text-muted">{t('Services.webDeveloper-title')}</Card.Subtitle>
+                          <Card.Title>{element.element.servicio}</Card.Title>
+                          {/* <Card.Subtitle className="mb-2 text-muted">{t('Services.webDeveloper-title')}</Card.Subtitle> */}
                           <Card.Text>
-                            Some quick example text to build on the card title and make up the
-                            bulk of the card's content.
+                            {element.element.descripcion}
                           </Card.Text>
-                          <Card.Link href="#">Card Link</Card.Link>
-                          <Card.Link href="#">Another Link</Card.Link>
                         </Card.Body>
                       </Card>
                   </Box>  

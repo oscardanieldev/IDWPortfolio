@@ -70,8 +70,15 @@
         "salesforce-title": "Consultoría y desarrollo Salesforce",
         "eCommerce-title": "Ventas por internet",
         "mobileDeveloper-title": "Desarrollo de aplicaciones móviles",
-        "webDeveloper-title": "Desarrollo de aplicaciones Web"
-
+        "webDeveloper-title": "Desarrollo de aplicaciones Web",
+        "title-Salesforce": "Salesforce",
+        "description-Salesforce": "Salesforce es una solución de gestión de relaciones con clientes que une empresas y clientes. Es una plataforma CRM integrada que brinda a todos tus departamentos, incluidos marketing, ventas, comercio y servicios, una vista única y compartida de cada cliente.",
+        "title-Wordpress": "Wordpress",
+        "description-Wordpress": "WordPress es un sistema de gestión de contenidos web (CMS o content management system), que en pocas palabras es un sistema para publicar contenido en la web de forma sencilla. Tan común es ya, que es el líder absoluto a nivel mundial para la creación de webs desde hace muchísimos años.",
+        "title-ReactJs": "React Js",
+        "description-ReactJs": "ReactJS es una de las librerías más populares de JavaScript para el desarrollo de aplicaciones móviles y web. Creada por Facebook, React contiene una colección de fragmentos de código JavaScript reutilizables utilizados para crear interfaces de usuario (UI) llamadas componentes.",
+        "title-React-Native": "React Native",
+        "description-React-Native": "React Native es un framework JavaScript para crear aplicaciones reales nativas para iOS y Android, basado en la librearía de JavaScript React para la creación de componentes visuales, cambiando el propósito de los mismos para, en lugar de ser ejecutados en navegador, correr directamente sobre las plataformas móviles nativas, en este caso iOS y Andorid."
     },
     "footer":{
         "copyRight":"Todos los derechos reservados"
