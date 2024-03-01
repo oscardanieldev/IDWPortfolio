@@ -1,0 +1,31 @@
+.sobreMiInfo{
+  text-align: justify;
+  text-justify: inter-word;
+  border-radius: 1%;
+  color: aqua;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-top: 1px solid aqua;
+
+}
+.unstyle {
+  all: unset;
+}
+
+.textoBlanco {
+  color: aqua
+}
+
+.bg-img-OscarDev{
+  background-image: url(../Home/img/oscarDev_logos.png);
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  border-radius: 1%;
+}
+.titleCard{
+  font-size: 2rem;
+  /* color: red; */
+}
