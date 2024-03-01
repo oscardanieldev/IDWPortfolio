@@ -117,13 +117,13 @@ function ResponsiveAppBar() {
                   <Typography textAlign="center" >{t('Services.title')}</Typography>
                 </MenuItem>
 
-                  <MenuItem  
+                  {/* <MenuItem  
                     onClick={handleCloseNavMenu}
                     component={Link}
                     href="/Contact"
                      >
                   <Typography textAlign="center" >{t('navBar.Contact')}</Typography>
-                </MenuItem>
+                </MenuItem> */}
 
                   <MenuItem  
                     onClick={handleCloseNavMenu}
@@ -193,7 +193,7 @@ function ResponsiveAppBar() {
 
                 </Button>
 
-                <Button
+                {/* <Button
                  onClick={handleCloseNavMenu}
                  href="/Contact"
                  className="borde-blanco"
@@ -202,7 +202,7 @@ function ResponsiveAppBar() {
                 >
                     {t('navBar.Contact')}
 
-                </Button>
+                </Button> */}
 
                 <Button
                  onClick={handleCloseNavMenu}
