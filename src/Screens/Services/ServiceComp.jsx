@@ -16,7 +16,7 @@ function ServiceComp(element) {
       width: '100%', 
       // backgroundColor: 'rgb(231, 231, 231)' ,
       color: 'white',
-      padding: '2rem',
+      padding: '2rem 0',
       
     }
 
@@ -29,7 +29,7 @@ function ServiceComp(element) {
                   <Box sx={{ flexGrow: 1, p: { xs: 2, md: 8 }, mb: {xs: 2, md: 4} }} className="sobreMiInfo">
                     <Card style={styleCard}>
                         <Card.Body>
-                          <Card.Title>{element.element.servicio}</Card.Title>
+                          <Card.Title className='titleCard'>{element.element.servicio}</Card.Title>
                           {/* <Card.Subtitle className="mb-2 text-muted">{t('Services.webDeveloper-title')}</Card.Subtitle> */}
                           <Card.Text>
                             {element.element.descripcion}
