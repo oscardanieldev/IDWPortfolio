@@ -96,7 +96,7 @@ function Footer() {
                 <Grid item xs={12}>
                       <Box sx={{ flexGrow: 1, p: { xs: 2, md: '4rem 4rem' }, m: {xs: 2, md: 2},  borderTop: 1  }} className="stylesFooter">
                         <Box sx={{ flexGrow: 1, p: { xs: 2, md: '1rem  0' }}}>
-                        {t('footer.copyRight')} &#169; 2024
+                        {t('footer.copyRight')} &#169; 2025
                         </Box>
                         <Button>
                           <FaLinkedin  

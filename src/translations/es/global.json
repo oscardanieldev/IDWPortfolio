@@ -82,6 +82,19 @@
     },
     "footer":{
         "copyRight":"Todos los derechos reservados"
+    },
+     "login": {
+        "title": "Iniciar sesión",
+        "email": "Correo electrónico",
+        "password": "Contraseña",
+        "button": "Entrar",
+        "error": "Correo o contraseña inválidos",
+        "restricted": "Acceso restringido a administradores"
+  },
+    "dashboardAdmin": {
+        "welcome": "Bienvenido al panel de administrador",
+        "description": "Desde aquí puedes crear, editar o eliminar publicaciones del blog.",
+        "logout": "Cerrar sesión"
     }
 
 }
