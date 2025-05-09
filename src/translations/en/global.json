@@ -81,6 +81,19 @@
         },
         "footer":{
             "copyRight":"All rights reserved."
+        },
+          "login": {
+            "title": "Sign In",
+            "email": "Email",
+            "password": "Password",
+            "button": "Login",
+            "error": "Invalid email or password",
+            "restricted": "Restricted access for administrators"
+        },
+          "dashboardAdmin": {
+            "welcome": "Welcome to the admin dashboard",
+            "description": "From here you can create, edit, or delete blog posts.",
+            "logout": "Log out"
         }
     
 }

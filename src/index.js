@@ -10,7 +10,9 @@ import Contact from "./Screens/Contact/Contact.jsx";
 import NavBar from "./Components/NavBar.jsx";
 import Footer from "./Components/Footer.jsx";
 import Services from "./Screens/Services/Services.jsx";
-
+import PrivateRoute from "./Screens/PrivateRoute/PrivateRoute.jsx";
+import Login from "./Screens/Login/Login.jsx";
+import DashboardAdmin from "./Screens/DashboardAdmin/DashboardAdmin.jsx";
 
 import {
   createBrowserRouter,
@@ -66,6 +68,19 @@ const router = createBrowserRouter([
   {
     path: "/Services",
     element: <Services />,
+  },
+  { 
+    path: "/login",
+    element: <Login />,
+  },
+   // ✅ Ruta protegida
+   {
+    path: "/dashboard",
+    element: (
+      <PrivateRoute>
+        <DashboardAdmin />
+      </PrivateRoute>
+    ),
   }, 
 ]);
 
