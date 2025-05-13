@@ -95,6 +95,17 @@
         "welcome": "Bienvenido al panel de administrador",
         "description": "Desde aquí puedes crear, editar o eliminar publicaciones del blog.",
         "logout": "Cerrar sesión"
+    },
+      "newPost": {
+        "title": "Nueva Publicación",
+        "titleLabel": "Título",
+        "summaryLabel": "Resumen",
+        "contentLabel": "Contenido",
+        "uploadButton": "Seleccionar imagen destacada",
+        "publishButton": "Publicar",
+        "successAlert": "Publicación creada exitosamente",
+        "errorAlert": "Hubo un error al crear el post",
+        "anonymous": "Anónimo"
     }
 
 }

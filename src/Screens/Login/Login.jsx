@@ -1,150 +1,184 @@
-import { useState } from "react";
-import {
-  Avatar,
-  Button,
-  TextField,
-  Grid,
-  Box,
-  Typography,
-  Container,
-  Paper,
-} from "@mui/material";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../firebaseConfig";
-import { useNavigate } from "react-router-dom";
-import { useTranslation } from "react-i18next";
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { supabase } from '../../lib/superBaseClient';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 export default function Login() {
-  const [t, i18n] = useTranslation("global");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    setError(null);
+
     try {
-      await signInWithEmailAndPassword(auth, email, password);
-      navigate("/dashboard");
+      const { error: authError } = await supabase.auth.signInWithPassword({
+        email,
+        password
+      });
+
+      if (authError) {
+        if (authError.message === 'Invalid login credentials') {
+          throw new Error('Usuario o contraseña incorrectos');
+        } else {
+          throw new Error('Error al conectar con el servidor');
+        }
+      }
+      navigate('/dashboard');
     } catch (err) {
-      setError(t("login.error"));
+      setError(err.message);
+    } finally {
+      setLoading(false);
     }
   };
 
+  // Estilos optimizados
+  const styles = {
+    container: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      minHeight: '100vh',
+      backgroundColor: '#000',
+      padding: '20px',
+      boxSizing: 'border-box',
+    },
+    form: {
+      width: '100%',
+      maxWidth: '400px',
+      padding: '40px',
+      backgroundColor: '#111',
+      border: '1px solid #00FFFF',
+      borderRadius: '8px',
+      boxShadow: '0 0 15px rgba(0, 255, 255, 0.2)',
+      margin: 0,
+    },
+    title: {
+      color: '#00FFFF',
+      textAlign: 'center',
+      marginBottom: '30px',
+      fontSize: '24px',
+      fontWeight: 'bold',
+      textShadow: '0 0 5px rgba(0, 255, 255, 0.5)',
+    },
+    inputContainer: {
+      width: '100%',
+      marginBottom: '20px',
+      position: 'relative',
+    },
+    input: {
+      width: '100%',
+      padding: '12px 40px 12px 12px',
+      backgroundColor: '#222',
+      border: '1px solid #00FFFF',
+      borderRadius: '4px',
+      color: '#FFF',
+      boxSizing: 'border-box',
+      fontSize: '16px',
+    },
+    iconButton: {
+      position: 'absolute',
+      right: '12px',
+      top: '12px',
+      color: '#00FFFF',
+      background: 'transparent',
+      border: 'none',
+      cursor: 'pointer',
+      fontSize: '20px',
+      padding: '0',
+    },
+    buttonContainer: {
+      width: '100%',
+      display: 'flex',
+      justifyContent: 'center',
+      marginTop: '10px',
+    },
+    button: {
+      width: '100%',
+      maxWidth: '200px',
+      padding: '12px',
+      backgroundColor: '#00FFFF',
+      color: '#000',
+      border: 'none',
+      borderRadius: '4px',
+      fontSize: '16px',
+      fontWeight: 'bold',
+      cursor: 'pointer',
+      transition: 'all 0.3s',
+    },
+    buttonHover: {
+      backgroundColor: '#00DDDD',
+    },
+    buttonDisabled: {
+      backgroundColor: '#006666',
+      cursor: 'not-allowed',
+    },
+    errorBox: {
+      backgroundColor: 'rgba(255, 85, 85, 0.1)',
+      border: '1px solid #FF5555',
+      borderRadius: '4px',
+      padding: '12px',
+      marginBottom: '20px',
+      color: '#FF5555',
+      textAlign: 'center',
+    },
+  };
+
   return (
-    <Box
-      sx={{
-        backgroundColor: "#000",
-        minHeight: "100vh",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        color: "#00FFFF",
-      }}
-    >
-      <Container component="main" maxWidth="xs">
-        <Paper
-          elevation={8}
-          sx={{
-            backgroundColor: "#111",
-            p: 4,
-            borderRadius: 3,
-            textAlign: "center",
-            color: "#00FFFF",
-          }}
-        >
-          <Avatar sx={{ m: "auto", bgcolor: "#00FFFF" }}>
-            <LockOutlinedIcon sx={{ color: "#000" }} />
-          </Avatar>
-          <Typography component="h1" variant="h5" sx={{ mt: 1, mb: 3 }}>
-            {t("login.title")}
-          </Typography>
-          <Box component="form" onSubmit={handleLogin} noValidate>
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              label={t("login.email")}
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              autoFocus
-              InputLabelProps={{ style: { color: "#00FFFF" } }}
-              InputProps={{
-                style: { color: "#fff" },
-              }}
-              sx={{
-                "& .MuiOutlinedInput-root": {
-                  "& fieldset": {
-                    borderColor: "#00FFFF",
-                  },
-                  "&:hover fieldset": {
-                    borderColor: "#00FFFF",
-                  },
-                  "&.Mui-focused fieldset": {
-                    borderColor: "#00FFFF",
-                  },
-                },
-              }}
-            />
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              label={t("login.password")}
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              InputLabelProps={{ style: { color: "#00FFFF" } }}
-              InputProps={{
-                style: { color: "#fff" },
-              }}
-              sx={{
-                "& .MuiOutlinedInput-root": {
-                  "& fieldset": {
-                    borderColor: "#00FFFF",
-                  },
-                  "&:hover fieldset": {
-                    borderColor: "#00FFFF",
-                  },
-                  "&.Mui-focused fieldset": {
-                    borderColor: "#00FFFF",
-                  },
-                },
-              }}
-            />
-            {error && (
-              <Typography variant="body2" color="error" sx={{ mt: 1 }}>
-                {error}
-              </Typography>
-            )}
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              sx={{
-                mt: 3,
-                mb: 2,
-                py: 1.5,
-                backgroundColor: "#00FFFF",
-                color: "#000",
-                fontWeight: "bold",
-                "&:hover": {
-                  backgroundColor: "#00e0e0",
-                },
-              }}
-            >
-              {t("login.button")}
-            </Button>
-          </Box>
-          <Grid container justifyContent="center">
-            <Typography variant="body2" color="#aaa">
-              {t("login.restricted")}
-            </Typography>
-          </Grid>
-        </Paper>
-      </Container>
-    </Box>
+    <div style={styles.container}>
+      <form onSubmit={handleLogin} style={styles.form}>
+        <h2 style={styles.title}>Iniciar Sesión</h2>
+
+        {error && (
+          <div style={styles.errorBox}>
+            <strong>Error:</strong> {error}
+          </div>
+        )}
+
+        <div style={styles.inputContainer}>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Correo electrónico"
+            required
+            style={styles.input}
+          />
+        </div>
+
+        <div style={styles.inputContainer}>
+          <input
+            type={showPassword ? "text" : "password"}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Contraseña"
+            required
+            style={styles.input}
+          />
+       
+        </div>
+
+        <div style={styles.buttonContainer}>
+          <button
+            type="submit"
+            disabled={loading}
+            style={{
+              ...styles.button,
+              ...(loading ? styles.buttonDisabled : {}),
+            }}
+            onMouseEnter={(e) => !loading && (e.target.style.backgroundColor = styles.buttonHover.backgroundColor)}
+            onMouseLeave={(e) => !loading && (e.target.style.backgroundColor = styles.button.backgroundColor)}
+          >
+            {loading ? 'Verificando...' : 'Ingresar'}
+          </button>
+        </div>
+      </form>
+    </div>
   );
 }

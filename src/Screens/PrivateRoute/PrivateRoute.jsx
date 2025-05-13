@@ -1,10 +1,19 @@
-import { Navigate } from "react-router-dom";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../firebaseConfig";
+import { useEffect, useState } from 'react';
+import { Navigate } from 'react-router-dom';
+import { supabase } from '../../lib/superBaseClient';
 
 export default function PrivateRoute({ children }) {
-  const [user, loading] = useAuthState(auth);
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  if (loading) return <p>Cargando...</p>;
-  return user ? children : <Navigate to="/login" replace />;
+  useEffect(() => {
+    supabase.auth.getUser().then(({ data: { user } }) => {
+      setUser(user);
+      setLoading(false);
+    });
+  }, []);
+
+  if (loading) return <div>Cargando...</div>;
+  if (!user) return <Navigate to="/login" />;
+  return children;
 }

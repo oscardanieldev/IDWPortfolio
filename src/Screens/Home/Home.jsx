@@ -19,17 +19,12 @@ import LightSpeed from 'react-reveal/LightSpeed';
 import oscarDanielDevHome from "./img/OscarDanielDevHome.png";
 import { Fab, Action } from 'react-tiny-fab';
 import 'react-tiny-fab/dist/styles.css';
-import app from "./../../firebaseConfig";
 import React, { useEffect } from "react";
 
 function Home() {
   //Js code
 
   const [t] = useTranslation("global");
-  useEffect(() => {
-    console.log("✅ Firebase fue inicializado correctamente:", app);
-  }, []);
-  //Render
   return (
     
     <div className="App">

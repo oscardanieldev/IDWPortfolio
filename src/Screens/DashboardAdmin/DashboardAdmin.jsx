@@ -3,19 +3,19 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { auth } from "../../firebaseConfig"; 
+import { supabase } from '../../lib/superBaseClient';
 
 export default function DashboardAdmin() {
   const [t] = useTranslation("global");
   const navigate = useNavigate();
 
 const handleLogout = async () => {
-  try {
-    await signOut(auth);  // Asegúrate de que esto sea llamado correctamente
-    navigate("/login");   // Redirige al login
-  } catch (error) {
-    console.error("Error signing out:", error);
-  }
+  const { error } = await supabase.auth.signOut();
+  if (error) console.error('Error al cerrar sesión:', error);
+  else navigate('/login');
 };
+
+
   return (
     <Box
       sx={{
