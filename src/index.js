@@ -13,7 +13,8 @@ import Services from "./Screens/Services/Services.jsx";
 import PrivateRoute from "./Screens/PrivateRoute/PrivateRoute.jsx";
 import Login from "./Screens/Login/Login.jsx";
 import DashboardAdmin from "./Screens/DashboardAdmin/DashboardAdmin.jsx";
-
+import NewPost from "./Screens/BlogAdmin/NewPost.jsx";
+import { supabase } from "./lib/superBaseClient.js";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -23,7 +24,13 @@ import WhatWeWork from "./Screens/WhatWeWork/WhatWeWork.jsx";
 import AboutMe from "./Screens/AboutMe/AboutMe.jsx";
 
 import Statistics from "./Screens/Home/Statistics/Statistics.jsx";
+import { Box } from '@mui/material';
 
+
+// Listener fuera de React (no requiere useEffect)
+supabase.auth.onAuthStateChange((event, session) => {
+  console.log('Evento de autenticación:', event, session);
+});
 
 let sessionLanguage = sessionStorage.getItem("sessionLanguage");
 
@@ -73,12 +80,20 @@ const router = createBrowserRouter([
     path: "/login",
     element: <Login />,
   },
-   // ✅ Ruta protegida
+   // ✅ Rutas protegida
    {
     path: "/dashboard",
     element: (
       <PrivateRoute>
         <DashboardAdmin />
+      </PrivateRoute>
+    ),
+  }, 
+    {
+    path: "/NewPost",
+    element: (
+      <PrivateRoute>
+        <NewPost />
       </PrivateRoute>
     ),
   }, 

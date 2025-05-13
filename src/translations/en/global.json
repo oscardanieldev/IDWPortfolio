@@ -94,6 +94,17 @@
             "welcome": "Welcome to the admin dashboard",
             "description": "From here you can create, edit, or delete blog posts.",
             "logout": "Log out"
+        },
+          "newPost": {
+            "title": "New Post",
+            "titleLabel": "Title",
+            "summaryLabel": "Summary",
+            "contentLabel": "Content",
+            "uploadButton": "Upload featured image",
+            "publishButton": "Publish",
+            "successAlert": "Post created successfully",
+            "errorAlert": "Error creating post",
+            "anonymous": "Anonymous"
         }
     
 }
