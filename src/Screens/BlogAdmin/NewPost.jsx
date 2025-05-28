@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Box, Button, Container, TextField, Typography, Paper, LinearProgress } from "@mui/material";
+import { 
+  Box, Button, Container, TextField, Typography, Paper, 
+  LinearProgress, Snackbar, Alert 
+} from "@mui/material";
 import { supabase } from "../../lib/superBaseClient";
 
 export default function NewPost() {
@@ -12,11 +15,16 @@ export default function NewPost() {
   const [uploadProgress, setUploadProgress] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  // Snackbar state
+  const [snackbar, setSnackbar] = useState({ open: false, message: "", severity: "success" });
+
+  const handleSnackbarClose = () => setSnackbar({ ...snackbar, open: false });
+
   const handleImageChange = (e) => {
     const file = e.target.files?.[0];
     if (file) {
       if (!file.type.match('image.*')) {
-        alert(t("newPost.imageError"));
+        setSnackbar({ open: true, message: t("newPost.imageError"), severity: "error" });
         return;
       }
       setImage(file);
@@ -73,8 +81,8 @@ export default function NewPost() {
       setContent("");
       setImage(null);
       
-      alert(t("newPost.successAlert"));
-      
+      setSnackbar({ open: true, message: t("newPost.successAlert"), severity: "success" });
+
       // Recargar la página después de 1 segundo
       setTimeout(() => {
         window.location.reload();
@@ -82,7 +90,7 @@ export default function NewPost() {
       
     } catch (error) {
       console.error("Error:", error);
-      alert(`${t("newPost.errorAlert")}: ${error.message}`);
+      setSnackbar({ open: true, message: `${t("newPost.errorAlert")}: ${error.message}`, severity: "error" });
     } finally {
       setIsSubmitting(false);
       setUploadProgress(0);
@@ -252,6 +260,16 @@ export default function NewPost() {
           </form>
         </Paper>
       </Container>
+      <Snackbar
+        open={snackbar.open}
+        autoHideDuration={4000}
+        onClose={handleSnackbarClose}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+      >
+        <Alert onClose={handleSnackbarClose} severity={snackbar.severity} sx={{ width: '100%' }}>
+          {snackbar.message}
+        </Alert>
+      </Snackbar>
     </Box>
   );
 }
