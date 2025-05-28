@@ -14,6 +14,7 @@ import PrivateRoute from "./Screens/PrivateRoute/PrivateRoute.jsx";
 import Login from "./Screens/Login/Login.jsx";
 import DashboardAdmin from "./Screens/DashboardAdmin/DashboardAdmin.jsx";
 import NewPost from "./Screens/BlogAdmin/NewPost.jsx";
+import { PostsList }from "./Screens/Posts/PostsList.jsx";
 import { supabase } from "./lib/superBaseClient.js";
 import {
   createBrowserRouter,
@@ -79,6 +80,10 @@ const router = createBrowserRouter([
   { 
     path: "/login",
     element: <Login />,
+  },
+  {
+    path: "/posts",
+    element: <PostsList />,
   },
    // ✅ Rutas protegida
    {
