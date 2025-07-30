@@ -46,7 +46,14 @@ function Blog() {
                     {t('Aboutme.exp-2-3')} 
                     <br />
                     <br />
-                    {t('Aboutme.exp-3')} 
+                    {t('Aboutme.exp-3-1')}
+                    <br />
+                    <br />
+                    {t('Aboutme.exp-3-2')} 
+                    <br />
+                    <br />
+                    {t('Aboutme.exp-3-3')} 
+
 
 
 

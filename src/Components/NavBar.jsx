@@ -132,6 +132,13 @@ function ResponsiveAppBar() {
                      >
                   <Typography textAlign="center" >{t('navBar.AboutMe')}</Typography>
                 </MenuItem>
+                <MenuItem  
+                  onClick={handleCloseNavMenu}
+                  component={Link}
+                  href="/posts"
+                >
+                  <Typography textAlign="center">{t('navBar.Posts')}</Typography>
+                </MenuItem>
                 <MenuItem sx={{ flexGrow: 1, borderTop: 1  }} >
                   <Typography    onClick={() => saveLanguage("en")}  textAlign="center" >ENG</Typography> 
                 </MenuItem>
@@ -213,6 +220,14 @@ function ResponsiveAppBar() {
                 >
                     {t('navBar.AboutMe')}
 
+                </Button>
+                <Button
+                  onClick={handleCloseNavMenu}
+                  href="/posts"
+                  className="borde-blanco"
+                  sx={{ my: 2, color: "white", display: "block" }}
+                >
+                  {t('navBar.Posts') /* Agrega esta clave en tus traducciones, ejemplo: "Publicaciones" / "Posts" */}
                 </Button>
 
             {/* ))} */}

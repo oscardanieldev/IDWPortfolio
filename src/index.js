@@ -9,12 +9,17 @@ import Home from "./Screens/Home/Home.jsx";
 import Contact from "./Screens/Contact/Contact.jsx";
 import NavBar from "./Components/NavBar.jsx";
 import Footer from "./Components/Footer.jsx";
+import CookiesBanner from "./Screens/CookiesNotice/CookiesBanner.jsx";
 import Services from "./Screens/Services/Services.jsx";
 import PrivateRoute from "./Screens/PrivateRoute/PrivateRoute.jsx";
 import Login from "./Screens/Login/Login.jsx";
 import DashboardAdmin from "./Screens/DashboardAdmin/DashboardAdmin.jsx";
 import NewPost from "./Screens/BlogAdmin/NewPost.jsx";
+import EditPost from "./Screens/BlogAdmin/EditPost.jsx";
+import PrivacyPolicy from "./Screens/PrivacyPolicy/PrivacyPolicy.jsx";
+import CookiesNotice from "./Screens/CookiesNotice/CookiesNotice.jsx";
 import { PostsList }from "./Screens/Posts/PostsList.jsx";
+import PostDetail from "./Screens/Posts/PostDetail.jsx";
 import { supabase } from "./lib/superBaseClient.js";
 import {
   createBrowserRouter,
@@ -85,6 +90,18 @@ const router = createBrowserRouter([
     path: "/posts",
     element: <PostsList />,
   },
+  {
+    path: "/PrivacyPolicy",
+    element: <PrivacyPolicy />,
+  },
+  {
+    path: "/CookiesNotice",
+    element: <CookiesNotice />,
+  },
+  {
+  path: "/post/:id",
+  element: <PostDetail />, // Este será tu nuevo componente
+},
    // ✅ Rutas protegida
    {
     path: "/dashboard",
@@ -102,6 +119,14 @@ const router = createBrowserRouter([
       </PrivateRoute>
     ),
   }, 
+  {
+  path: "/edit-post/:id",
+  element: (
+    <PrivateRoute>
+      <EditPost />
+    </PrivateRoute>
+  ),
+},
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -109,6 +134,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <I18nextProvider i18n={i18next}>
       <NavBar />
       <RouterProvider router={router} />
+      <CookiesBanner />
       <Footer />
 
     </I18nextProvider>

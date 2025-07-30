@@ -2,7 +2,9 @@
     "navBar":{
         "Contact":"Contacto",
         "WhatWeWork": "Portafolio",
-        "AboutMe":  "Sobre mí"
+        "AboutMe":  "Sobre mí",
+        "Posts":"Blog"
+
     },
     "home":{
         "slogan": "Potencia tu presencia digital",
@@ -63,7 +65,10 @@
         "exp-2-1": "En 2023 comencé un nuevo reto trabajando en ",
         "exp-2-2": " en donde se me asignó como cliente a ",
         "exp-2-3": " trabajando como desarrollador Salesforce Sr. Sin lugar a dudas puedo decir que fue una etapa muy enriquesedora en la que adquirí muchos conocimientos como desarrollador y consultor Salesforce.",
-        "exp-3": "Actualmente trabajo de manera independiente desarrollado aplicacones web y móbiles, impulsando la presencia digital. Así mismo como consultor y desarrollador Salesforce, ofreciendo mis conocimientos para darle a mis clientes la mejor experiencia en esta gran herramienta digital"
+        "exp-3-1": "Actualmente trabajo como Administrador y Desarrollador Salesforce en Scotiabank, donde diseño e implemento soluciones que optimizan procesos internos y mejoran la experiencia del cliente. Desde que me integré al equipo, he trabajado en la automatización de flujos complejos, integración con sistemas externos mediante APIs y en la implementación de buenas prácticas para el mantenimiento de entornos Salesforce a gran escala.",
+        "exp-3-2": "Además de mi enfoque técnico, también colaboro estrechamente con otros equipos como QA, DevOps y arquitectura, lo que me permite tener una visión integral del ciclo de vida de cada proyecto. Esta posición me ha permitido consolidar mi experiencia técnica, al mismo tiempo que desarrollo habilidades de liderazgo, análisis y solución de problemas.",
+        "exp-3-3": "En paralelo, he iniciado proyectos personales de backend con Node.js para tener un control más profundo de la lógica de negocio fuera de Salesforce, buscando siempre nuevos retos técnicos que me impulsen a crecer."
+
     },
     "Services":{
         "title": "Servicios",
@@ -81,7 +86,9 @@
         "description-React-Native": "React Native es un framework JavaScript para crear aplicaciones reales nativas para iOS y Android, basado en la librearía de JavaScript React para la creación de componentes visuales, cambiando el propósito de los mismos para, en lugar de ser ejecutados en navegador, correr directamente sobre las plataformas móviles nativas, en este caso iOS y Andorid."
     },
     "footer":{
-        "copyRight":"Todos los derechos reservados"
+        "copyRight":"Todos los derechos reservados",
+        "privacyPolicy":"Política de Privacidad"
+
     },
      "login": {
         "title": "Iniciar sesión",
@@ -106,6 +113,38 @@
         "successAlert": "Publicación creada exitosamente",
         "errorAlert": "Hubo un error al crear el post",
         "anonymous": "Anónimo"
+    },
+    "privacyPolicy": {
+        "title": "Política de Privacidad",
+        "intro": "En oscardanieldev.com valoramos y respetamos tu privacidad. Esta Política de Privacidad describe cómo recopilamos, usamos y protegemos tu información personal cuando visitas nuestro sitio web.",
+        "section1": "1. Información que recopilamos",
+        "section1Text": "Podemos recopilar información personal como tu nombre y correo electrónico si decides contactarnos a través de formularios. También recopilamos datos no personales como dirección IP, tipo de navegador y páginas visitadas, mediante cookies y herramientas de análisis como Google Analytics.",
+        "section2": "2. Uso de la información",
+        "section2Text": "Utilizamos la información para responder a tus consultas, mejorar el sitio y analizar el tráfico. No compartimos tu información personal con terceros, salvo requerimiento legal.",
+        "section3": "3. Cookies",
+        "section3Text": "Este sitio utiliza cookies para mejorar la experiencia del usuario y analizar el tráfico. Puedes desactivar las cookies en la configuración de tu navegador, aunque esto puede afectar el funcionamiento del sitio.",
+        "section4": "4. Enlaces a sitios externos",
+        "section4Text": "Nuestro sitio puede contener enlaces a otros sitios web. No somos responsables de las prácticas de privacidad de esos sitios. Te recomendamos revisar las políticas de privacidad de cada sitio externo que visites.",
+        "section5": "5. Cambios en la política",
+        "section5Text": "Nos reservamos el derecho de modificar esta política en cualquier momento. Los cambios serán publicados en esta página y entrarán en vigor desde el momento de su publicación.",
+        "section6": "6. Contacto",
+        "section6Text": "Si tienes dudas sobre esta Política de Privacidad, puedes contactarnos a través de nuestro formulario de contacto.",
+        "lastUpdate": "Última actualización"
+    },
+    "cookiesNotice": {
+        "title": "Aviso de Cookies",
+        "intro": "Este sitio web utiliza cookies para mejorar la experiencia del usuario y analizar el tráfico. Al continuar navegando, aceptas el uso de cookies.",
+        "section1": "¿Qué son las cookies?",
+        "section1Text": "Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo cuando visitas un sitio web. Permiten recordar tus preferencias y mejorar la funcionalidad del sitio.",
+        "section2": "¿Qué tipos de cookies usamos?",
+        "section2Text": "Utilizamos cookies propias y de terceros para fines técnicos, de análisis y de personalización. Las cookies de análisis nos ayudan a entender cómo interactúan los visitantes con el sitio.",
+        "section3": "¿Cómo puedes gestionar las cookies?",
+        "section3Text": "Puedes configurar tu navegador para aceptar o rechazar cookies, así como para eliminar las ya almacenadas. Ten en cuenta que desactivar las cookies puede afectar el funcionamiento del sitio.",
+        "section4": "Cambios en el aviso de cookies",
+        "section4Text": "Nos reservamos el derecho de modificar este aviso en cualquier momento. Los cambios serán publicados en esta página.",
+        "lastUpdate": "Última actualización",
+        "acceptButton": "Aceptar",
+        "learnMore": "Saber más"
     }
 
 }
