@@ -96,7 +96,23 @@ function Footer() {
                 <Grid item xs={12}>
                       <Box sx={{ flexGrow: 1, p: { xs: 2, md: '4rem 4rem' }, m: {xs: 2, md: 2},  borderTop: 1  }} className="stylesFooter">
                         <Box sx={{ flexGrow: 1, p: { xs: 2, md: '1rem  0' }}}>
-                        {t('footer.copyRight')} &#169; 2025
+                          <Typography variant="body2" sx={{ display: "inline", color: "#00FFFF" }}>
+                            {t('footer.copyRight')} &#169; 2025
+                          </Typography>
+                          <br />
+                          <Link 
+                            href="/PrivacyPolicy" 
+                            sx={{ color: 'aqua', textDecoration: 'underline', fontWeight: 500 }}
+                          >
+                            {t('footer.privacyPolicy')}
+                          </Link>
+                          <br />
+                           <Link 
+                              href="/CookiesNotice" 
+                              sx={{ color: 'aqua', textDecoration: 'underline', fontWeight: 500 }}
+                            >
+                              {t('cookiesNotice.title')}
+                           </Link>
                         </Box>
                         <Button>
                           <FaLinkedin  
@@ -120,7 +136,9 @@ function Footer() {
                               onClick={sendEmail}/>
                         </Button>
 
-                      </Box>  
+                      </Box> 
+
+ 
                 </Grid>
 
       </Grid>

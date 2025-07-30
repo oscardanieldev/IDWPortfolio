@@ -2,7 +2,9 @@
         "navBar":{
             "Contact":"Contact",
             "WhatWeWork": "What We Work",
-            "AboutMe":  "About Me"
+            "AboutMe":  "About Me",
+            "Posts":"Blog"
+
         },
         "home":{
             "slogan": "Power your digital presence",
@@ -58,7 +60,9 @@
             "exp-2-1": "In 2023 I started a new challenge working at ",
             "exp-2-2": " where I was assigned as a customer to  ",
             "exp-2-3": " working as a Salesforce Sr. developer. Without a doubt I can say that it was a very enriching stage in which I acquired a lot of knowledge as a Salesforce developer and consultant.",
-            "exp-3": " I currently work independently developing web and mobile applications, promoting digital presence. Also as a Salesforce consultant and developer, offering my knowledge to give my clients the best experience in this great digital tool."
+            "exp-3-1": "I'm currently working as a Salesforce Administrator and Developer at Scotiabank, where I design and implement solutions that improve internal workflows and enhance the customer experience. Since joining the team, I’ve been responsible for automating complex flows, integrating with external systems through APIs, and applying best practices to maintain large-scale Salesforce environments.",
+            "exp-3-2": "In addition to my technical work, I collaborate closely with QA, DevOps, and architecture teams, which gives me a well-rounded view of each project’s lifecycle. This role has strengthened my technical expertise while also helping me grow in areas like problem-solving, analysis, and team collaboration.",
+            "exp-3-3": "In parallel, I’ve been building backend projects using Node.js to gain deeper control over business logic outside Salesforce—always looking for new technical challenges that help me grow"
     
        
         },
@@ -80,7 +84,8 @@
 
         },
         "footer":{
-            "copyRight":"All rights reserved."
+            "copyRight":"All rights reserved.",
+            "privacyPolicy":"Privacy Policy"
         },
           "login": {
             "title": "Sign In",
@@ -105,6 +110,38 @@
             "successAlert": "Post created successfully",
             "errorAlert": "Error creating post",
             "anonymous": "Anonymous"
-        }
+        },
+        "privacyPolicy": {
+            "title": "Privacy Policy",
+            "intro": "At oscardanieldev.com, we value and respect your privacy. This Privacy Policy explains how we collect, use, and protect your personal information when you visit our website.",
+            "section1": "1. Information We Collect",
+            "section1Text": "We may collect personal information such as your name and email address if you choose to contact us through forms. We also collect non-personal data such as IP address, browser type, and pages visited, using cookies and analytics tools like Google Analytics.",
+            "section2": "2. Use of Information",
+            "section2Text": "We use the information to respond to your inquiries, improve the site, and analyze traffic. We do not share your personal information with third parties, except when required by law.",
+            "section3": "3. Cookies",
+            "section3Text": "This site uses cookies to enhance user experience and analyze traffic. You can disable cookies in your browser settings, but this may affect site functionality.",
+            "section4": "4. External Links",
+            "section4Text": "Our site may contain links to other websites. We are not responsible for the privacy practices of those sites. We recommend reviewing the privacy policies of any external sites you visit.",
+            "section5": "5. Policy Changes",
+            "section5Text": "We reserve the right to modify this policy at any time. Changes will be posted on this page and will take effect immediately upon publication.",
+            "section6": "6. Contact",
+            "section6Text": "If you have questions about this Privacy Policy, you can contact us through our contact form.",
+            "lastUpdate": "Last update"
+        },
+        "cookiesNotice": {
+            "title": "Cookies Notice",
+            "intro": "This website uses cookies to enhance user experience and analyze traffic. By continuing to browse, you accept the use of cookies.",
+            "section1": "What are cookies?",
+            "section1Text": "Cookies are small text files stored on your device when you visit a website. They allow us to remember your preferences and improve site functionality.",
+            "section2": "What types of cookies do we use?",
+            "section2Text": "We use our own and third-party cookies for technical, analytical, and personalization purposes. Analytical cookies help us understand how visitors interact with the site.",
+            "section3": "How can you manage cookies?",
+            "section3Text": "You can configure your browser to accept or reject cookies, as well as delete those already stored. Please note that disabling cookies may affect site functionality.",
+            "section4": "Changes to the cookies notice",
+            "section4Text": "We reserve the right to modify this notice at any time. Changes will be posted on this page.",
+            "lastUpdate": "Last update",
+            "acceptButton": "Accept",
+            "learnMore": "Learn more"
+}
     
 }

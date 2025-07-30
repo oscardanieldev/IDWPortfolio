@@ -101,16 +101,19 @@ export const PostsList = () => {
               elevation={0}
             >
               {post.image_url && (
-                <CardMedia
-                  component="img"
-                  image={post.image_url}
-                  alt={post.title}
-                  sx={{
-                    height: 200,
-                    objectFit: "cover",
-                    borderBottom: `1px solid ${aqua}44`,
-                  }}
-                />
+<CardMedia
+  component="img"
+  image={post.image_url}
+  alt={post.title}
+  sx={{
+    height: 200,
+    objectFit: "cover",
+    borderBottom: `1px solid ${aqua}44`,
+    borderTopLeftRadius: 12,
+    borderTopRightRadius: 12,
+    boxShadow: "0 2px 16px 0 #00ffff33",
+  }}
+/>
               )}
               <CardContent sx={{ flexGrow: 1 }}>
                 <Typography
