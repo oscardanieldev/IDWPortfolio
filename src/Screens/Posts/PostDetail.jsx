@@ -86,7 +86,7 @@ export default function PostDetail() {
         {post.summary}
       </Typography>
 
-      <AdPlaceholder />
+      {/* <AdPlaceholder /> */}
 
       {post.image_url && (
         <Box mb={3} display="flex" justifyContent="center">
